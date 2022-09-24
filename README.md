@@ -19,7 +19,7 @@ _You need this first part as well!_
 		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
-```xml
+```
 
 ```xml
 	<dependency>
