@@ -17,7 +17,4 @@ public class ApacheCommonsTest {
 	public void test_commons_invalid_email_is_invalid() {
 		assertFalse(EmailValidator.getInstance().isValid("invalidemail.com"));
 	}
-	
-	@Test
-	public void test_length
 }

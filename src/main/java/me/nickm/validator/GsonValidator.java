@@ -4,20 +4,24 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GsonValidator {
+import org.apache.commons.validator.ValidatorException;
 
+import com.google.gson.Gson;
+
+public class GsonValidator {
 	private final static boolean checkAllFieldsForNull = false;
 	private Object obj;
-	
+
 	public GsonValidator(Object obj) {
 		this.obj = obj;
 	}
-	
-	public List<String> validate() {
+
+	public ValidationBuilder validate() {
 		List<String> errors = new ArrayList<String>();
 
 		for (Field f : obj.getClass().getDeclaredFields()) {
-			f.setAccessible(true);					System.out.println("a");
+			f.setAccessible(true);
+			System.out.println("a");
 
 			try {
 				if (checkAllFieldsForNull || f.getAnnotation(Required.class) != null) {
@@ -32,16 +36,26 @@ public class GsonValidator {
 				e.printStackTrace();
 			}
 		}
-		return errors;
+		return new ValidationBuilder(errors);
 	}
-	
-	public String validateAndConvertJson(){
-		List<String> errors = 
-	}
-	
-	public static String validate(Object obj) {
-		GsonValidator validator = new GsonValidator(obj);
-		
-		return validator.validateAndConvertJson();
+
+	public class ValidationBuilder {
+		List<String> errors;
+
+		public ValidationBuilder(List<String> errors) {
+			this.errors = errors;
+		}
+
+		public String toJsonOrThrow() throws ValidatorException {
+			return "";
+		}
+
+		public String toJson() {
+			if (!errors.isEmpty()) {
+				return null;
+			}
+			Gson gson = new Gson();
+			return gson.toJson(gson);
+		}
 	}
 }
