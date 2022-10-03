@@ -7,11 +7,11 @@ import org.junit.Test;
 
 import com.google.gson.JsonObject;
 
-import me.nickm.validator.JValidate;
-import me.nickm.validator.JValidate.Email;
-import me.nickm.validator.JValidate.Required;
-import me.nickm.validator.JValidate.Size;
-import me.nickm.validator.ValidationException;
+import io.github.nickm980.validator.JValidate;
+import io.github.nickm980.validator.ValidationException;
+import io.github.nickm980.validator.JValidate.Email;
+import io.github.nickm980.validator.JValidate.Required;
+import io.github.nickm980.validator.JValidate.Size;
 
 public class ValidatorTest {
 

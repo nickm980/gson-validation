@@ -1,4 +1,4 @@
-package me.nickm.validator;
+package io.github.nickm980.validator;
 
 import java.text.MessageFormat;
 
