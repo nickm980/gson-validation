@@ -3,9 +3,9 @@
 
 Gson is an annotation based  validation library used to validate java objects when converting to and from json strings using google's gson library.
 
-- Use annotations to avoid boilerplate
-- Simple and lightweight library
-- Automatic validation in just one line 
+- Use annotations to seperate validation logic from rest of your code
+- Simple and lightweight library which doesn't get in the way
+- Easy to and add custom annotations to fit your needs.
 
 ## Installation
 
