@@ -9,16 +9,7 @@ Gson is an annotation based  validation library used to validate java objects wh
 
 ## Installation
 
-
-Future maven support will look like this, but for now download the jar and add it to your build path
-
-```xml
-	<dependency>
-	    <groupId>io.github.nickm980</groupId>
-	    <artifactId>gson-validation</artifactId>
-	    <version>v1.0.0</version>
-	</dependency>
-```
+For now maven isn't supported, you can use jitpack but I would reccomend downloading as a jar and adding to your build path
 
 ## Development
 
