@@ -9,21 +9,12 @@ Gson is an annotation based  validation library used to validate java objects wh
 
 ## Installation
 
-Add the following to your maven pom.xml file. Make sure to add the jitpack repository as well as the dependency or else it will not work
 
-_You need this first part as well!_
-```xml
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-```
+Future maven support will look like this, but for now download the jar and add it to your build path
 
 ```xml
 	<dependency>
-	    <groupId>com.github.nickm980</groupId>
+	    <groupId>io.github.nickm980</groupId>
 	    <artifactId>gson-validation</artifactId>
 	    <version>v1.0.0</version>
 	</dependency>
